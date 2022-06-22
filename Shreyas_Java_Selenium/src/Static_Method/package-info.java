@@ -1,0 +1,1 @@
+package Static_Method;
