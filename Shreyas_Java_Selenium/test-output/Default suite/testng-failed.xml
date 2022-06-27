@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GlobalHR_LOGIN.Bank_Single_Delete">
+      <class name="Broken_Links_findout.ImageNotFound">
         <methods>
-          <include name="quit"/>
-          <include name="setup"/>
           <include name="test"/>
+          <include name="quit"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- GlobalHR_LOGIN.Bank_Single_Delete -->
+      </class> <!-- Broken_Links_findout.ImageNotFound -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

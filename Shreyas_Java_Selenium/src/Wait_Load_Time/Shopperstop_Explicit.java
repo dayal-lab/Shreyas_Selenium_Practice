@@ -12,24 +12,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
-
-
 public class Shopperstop_Explicit 
 
 {
 	WebDriver driver;
 	WebDriverWait expl_wait;
 	
-	
-		
-		
-		@BeforeTest
-		public void setup()
-		{
-			
-		
-		
+	@BeforeTest
+	public void setup()
+	{
 		System.setProperty("webdriver.chrome.driver","e:\\chromedriver93\\chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.manage().window().maximize();
@@ -40,14 +31,12 @@ public class Shopperstop_Explicit
 				long finish = System.currentTimeMillis();
 				long total = finish - start ;
 				System.out.println("Total load time of Home page is (in millisecond) : " +total);
-				
 	}
 		
-		
-@Test
-public void test() throws InterruptedException
+	@Test
+	public void test() throws InterruptedException
 
-{
+	{
 
 	//In Explicit, if not got given xpath, then runs last @AfterTest method and gives output pass/fails.
 	//But in Implicit, if not got xpath, then last @AfterTest method not runs , and not give output pass/fails.

@@ -18,68 +18,47 @@ public class ImageNotFound
 {
 	WebDriver driver;
 	
-	
 	@BeforeTest 
 	public void Setup()
 	{
 		WebDriverManager.chromedriver().setup();
-		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
-		
 		driver = new ChromeDriver(options);
-		driver.get("https://findusonweb.co.uk/view_companies");
-	
+		driver.get("https://www.amazon.in/ref=nav_logo");
 	}
 	
 	@Test
 	public void test() throws InterruptedException, MalformedURLException, IOException
 	{
-	
-		//take tagname "a" , bcz main URL's href stores into tag "img"
-		List <WebElement> list = driver.findElements(By.tagName("img"));
+		List <WebElement> list = driver.findElements(By.tagName("img"));			//take tagname "a" , bcz main URL's href stores into tag "img"
 		
-		//for loop to continuously check all URL till List's size is less than "0"
-		for(int j=0; j<list.size(); j++) 
+		for(int j=0; j<list.size(); j++) 											//for loop to continuously check all URL till List's size is less than "0"
 		{
-	         WebElement e = list.get(j); //get data captured by"j"
+	       WebElement e = list.get(j); 												//get data captured by"j"
+	       String url = e.getAttribute("src");											 //take attribute "href" by creating object "url"
 		
-	    //take attribute "href" by creating object "url"
-		String url = e.getAttribute("src");
-		
-		
-		//if URL is null or emoty or blank than following class or id or title or other take and print that
-		if (url==null || url.isEmpty()  || url.isBlank())
+		if (url==null || url.isEmpty()  || url.isBlank())							//if URL is null or emoty or blank than following class or id or title or other take and print that
 		{
-			
 			String cls = e.getAttribute("class");
-			System.out.println("Not found URL of image : "+cls+ '\n');
-			
-       	}
+			System.out.println("*********************************** Not found URL of image : *********************************"+cls+ '\n');
+		}
 		else
-			try{
-				
-				System.out.println("Found URL of image : "+url+ '\n');
-				
-			}
-		catch(Exception ex)
+		try
 		{
-			
-			//if errors captured, then print it messages
-   		 System.out.println(ex.getMessage());
-   		 ex.printStackTrace();
-   		 System.out.println(ex.getLocalizedMessage());
-   		 System.out.println(ex.getClass());
+			System.out.println("Found URL of image : "+url+ '\n');
 		}
 		
-		
+		catch(Exception ex)
+		{
+		 System.out.println(ex.getMessage());
+   		 ex.printStackTrace();
+   		 System.out.println(ex.getLocalizedMessage());
+		}
 	}
-		System.out.println('\n'+'\n');
-		System.out.println("URL CHECKING COMPLETED");
+		System.out.println("TOTAL"+list.size()+" IMAGE URL CHECKING COMPLETED.");
 }
-	
-	
-	
+
 	@AfterTest
 	public void quit() throws InterruptedException
 	{

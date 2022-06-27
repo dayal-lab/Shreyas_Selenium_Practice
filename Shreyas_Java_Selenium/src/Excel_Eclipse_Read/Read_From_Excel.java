@@ -8,11 +8,12 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+
 public class Read_From_Excel 
 {
 	public static void main (String args[]) throws IOException
 	{
-	//CHECK ALL DATA IN :E\\Test.xlsx	
+//CHECK ALL DATA IN :E\\Test.xlsx	
 	
 	//Create an object of File class to open xlsx file
     File file =    new File("e:\\Test.xlsx");
@@ -31,12 +32,12 @@ public class Read_From_Excel
     XSSFRow row1=sheet.getRow(1);	//get data "abc"  which is at row "1" vertically just below "username" header
     
     //Create a cell object to retreive cells of horizontal
-    XSSFCell cell0=row0.getCell(0);	//get data from file which is at 1st (i.e 1st cell starts from 1st location , so 1st horizontally is "Password" see in file horizontally 
-    XSSFCell cell1=row1.getCell(1);	//get data from file which is at 1st (i.e 1st cell starts from 1st location , so 1st horizontally is "Password" see in file horizontally 
+    XSSFCell cell0=row0.getCell(1);	//get data from file which is at 1st (i.e 1st cell starts from 1st location , so 1st horizontally is "Password" see in file horizontally 
+    XSSFCell cell1=row1.getCell(0);	//get data from file which is at 1st (i.e 1st cell starts from 1st location , so 1st horizontally is "Password" see in file horizontally 
     
     //Get the address in a variable
     String address0= cell0.getStringCellValue();
-   String address1= cell1.getStringCellValue();
+    String address1= cell1.getStringCellValue();
     
     //Printing the address
     System.out.println (address0);
@@ -44,5 +45,4 @@ public class Read_From_Excel
     
     wb.close();
 }
-
 }
