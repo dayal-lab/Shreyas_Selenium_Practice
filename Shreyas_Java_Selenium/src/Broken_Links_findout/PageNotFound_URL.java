@@ -27,7 +27,7 @@ public class PageNotFound_URL
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		driver = new ChromeDriver(options);
-		driver.get("https://www.amazon.in/ref=nav_logo");
+		driver.get("https://www.amazon.in/gp/browse.html?node=6648217031&ref_=nav_cs_fashion");
 	}
 	
 	@Test
@@ -59,13 +59,11 @@ public class PageNotFound_URL
 				
 		if (http.getResponseCode()==400 )
 		{
-			System.out.println(+'\n'+'\n'+"************************************* BAD REQUEST *************************************************************************** :" 
-			+url+'\n'+ "Status code:"+http.getResponseCode()+'\n'+"Response message:"  +http.getResponseMessage()+'\n');
+			System.out.println("************ BAD REQUEST ************** : " +url+'\n'+ "Status code:"+http.getResponseCode()+'\n'+"Response message:"  +http.getResponseMessage()+'\n');
 		}
-		if (http.getResponseCode()==404 )
+		if (http.getResponseCode()==404)
 		{
-			System.out.println(+'\n'+'\n'+"************************************* NOT FOUND LINK *************************************************************************** :" 
-			+url+'\n'+ "Status code:"+http.getResponseCode()+'\n'+"Response message:"  +http.getResponseMessage()+'\n');
+			System.out.println("********** NOT FOUND LINK ************  :" +url+'\n'+ "Status code:"+http.getResponseCode()+'\n'+"Response message:"  +http.getResponseMessage()+'\n');
 		}
 		}
 
@@ -73,12 +71,10 @@ public class PageNotFound_URL
 		{
    		 System.out.println(ex.getMessage());
    		 ex.printStackTrace();
-   		 System.out.println(ex.getLocalizedMessage());
-   		 System.out.println(ex.getClass());
 		}
 	}
 		System.out.println('\n'+'\n');
-		System.out.println("-----> Total "+list.size()+ " CHECKING COMPLETED <-----");
+		System.out.println("----------> Total "+list.size()+ " CHECKING COMPLETED <-----------");
 }
 	
 	@AfterTest

@@ -11,13 +11,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ImageNotFound 
+public class ImageError_onlyMessageof_BrokenImageLoop 
 {
 	WebDriver driver;
-	
 	@BeforeTest 
 	public void Setup()
 	{
@@ -28,31 +26,33 @@ public class ImageNotFound
 		driver.get("https://www.amazon.in/ref=nav_logo");		
 	}
 	
+	@SuppressWarnings("null")
 	@Test
 	public void test() throws InterruptedException, MalformedURLException, IOException
 	{
-		List <WebElement> list = driver.findElements(By.tagName("img"));			//take tagname "a" , bcz main URL's href stores into tag "img"
-		
-		for(int j=0; j<list.size(); j++) 											//for loop to continuously check all URL till List's size is less than "0"
+		try
 		{
-	       WebElement e = list.get(j); 												//get data captured by"j"
-	       String url = e.getAttribute("src");											 //take attribute "href" by creating object "url"
+		List <WebElement> list = driver.findElements(By.tagName("img"));			
 		
-		if (url==null || url.isEmpty()  || url.isBlank())							//if URL is null or emoty or blank than following class or id or title or other take and print that
+		for(int j=0; j<list.size(); j++) 											
 		{
-			String tag	= e.getTagName();
+	       WebElement e = list.get(j); 												
+	       String url = e.getAttribute("src");											 
+		
+		if (!(url==null) || !url.isEmpty()  || !url.isBlank())							
+		{
+		}
+		else
+		{
+		String tag	= e.getTagName();
 			String id 	= e.getAttribute("id");
 			String cls 	= e.getAttribute("class");
 			String title= e.getAttribute("title");
 			String href = e.getAttribute("href");
 			System.out.println("******** BROKEN IMAGE URL *******"+url+'\n'+ "ID name URL	: "+id+'\n'+"Class Name URL	: "+cls+'\n'+"Title name URL	: "+title+'\n'+"href name URL	: "+href+'\n'+"Tag name URL	: "+tag+'\n')	;
 		}
-		else
-		try
-		{
-			System.out.println("Found URL of image : "+url+ '\n');
-		}
-		
+	}
+}
 		catch(Exception ex)
 		{
 		 System.out.println(ex.getMessage());
@@ -60,12 +60,11 @@ public class ImageNotFound
    		 System.out.println(ex.getLocalizedMessage());
 		}
 	}
-		System.out.println("-----------> TOTAL "+list.size()+" IMAGE URL CHECKING COMPLETED.<-----------");
-}
 
 	@AfterTest
 	public void quit() throws InterruptedException
 	{
+		System.out.println('\n'+"***** NO ANY BROKEN IMAGE ON THIS PAGE *****"+'\n');
 		Thread.sleep(2000);	
 		driver.quit();		
 	}	
