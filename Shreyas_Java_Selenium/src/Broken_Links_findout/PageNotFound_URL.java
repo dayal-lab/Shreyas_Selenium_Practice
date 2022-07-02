@@ -41,13 +41,12 @@ public class PageNotFound_URL
 		
 	    String url = e.getAttribute("href");											//take attribute "href" by creating object "url"
 		
-		if (url==null || url.isEmpty()  || url.isBlank())								//if URL is null or emoty or blank than following class or id or title or other take and print that
+		if (url==null || url.isEmpty()  || url.isBlank())								//if URL is null or emoty or blank then following class or id or title or other take and print that
 		{
+			String tag = e.getTagName();
 			String cls = e.getAttribute("class");
-       	 	String id = e.getAttribute("id");
-       	 	String title = e.getAttribute("title");
-       	 	String datatype = e.getAttribute("data-toggle");
-       	 	System.out.println("href is null: "+" className:"+cls+" title:"+title+" Id:"+id+" value:"+datatype);
+			String title = e.getAttribute("title");
+			System.out.println("href : "+url+'\n'+"tag : "+tag+'n'+"Class : "+cls+'\n'+"title : "+title+'\n');
 		}
 		else
 			

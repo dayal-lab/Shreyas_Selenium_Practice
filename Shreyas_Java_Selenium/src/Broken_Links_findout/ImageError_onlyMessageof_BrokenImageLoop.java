@@ -32,6 +32,7 @@ public class ImageError_onlyMessageof_BrokenImageLoop
 	{
 		try
 		{
+		System.out.println('\n'+"*** BROKEN IMAGE CHECKING STARTED......"+'\n');
 		List <WebElement> list = driver.findElements(By.tagName("img"));			
 		
 		for(int j=0; j<list.size(); j++) 											
@@ -52,6 +53,9 @@ public class ImageError_onlyMessageof_BrokenImageLoop
 			System.out.println("******** BROKEN IMAGE URL *******"+url+'\n'+ "ID name URL	: "+id+'\n'+"Class Name URL	: "+cls+'\n'+"Title name URL	: "+title+'\n'+"href name URL	: "+href+'\n'+"Tag name URL	: "+tag+'\n')	;
 		}
 	}
+			System.out.println("-------------------------------------------------------------------------------------------------------------------------------");
+			System.out.println("******** Total "+list.size()+ " IMAGE URL CHECKED. NO ANY BROKEN IMAGE ON THIS LINK--->'" +driver.getCurrentUrl()+"' ********");
+			System.out.println("-------------------------------------------------------------------------------------------------------------------------------"+'\n'+'\n');
 }
 		catch(Exception ex)
 		{
@@ -64,7 +68,6 @@ public class ImageError_onlyMessageof_BrokenImageLoop
 	@AfterTest
 	public void quit() throws InterruptedException
 	{
-		System.out.println('\n'+"***** NO ANY BROKEN IMAGE ON THIS PAGE *****"+'\n');
 		Thread.sleep(2000);	
 		driver.quit();		
 	}	
