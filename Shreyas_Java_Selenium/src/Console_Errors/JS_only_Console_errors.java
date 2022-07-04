@@ -1,6 +1,5 @@
 package Console_Errors;
 
-import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,18 +28,10 @@ public class JS_only_Console_errors
 	@Test
 	public void test()
 	{
-		Set <String> logTypes = driver.manage().logs().getAvailableLogTypes();
-		
-		for(String string : logTypes)
-		{
-			System.out.println(string);
-		}
-		
-	
 	LogEntries  logEntries = driver.manage().logs().get(LogType.BROWSER);
 	for (LogEntry entry : logEntries)
-		System.out.println(entry);
-}
+	System.out.println(entry);
+	}
 
 	@AfterTest
 	public void quit()
@@ -48,8 +39,6 @@ public class JS_only_Console_errors
 		driver.quit();
 	}
 }
-
-
 
 
 
