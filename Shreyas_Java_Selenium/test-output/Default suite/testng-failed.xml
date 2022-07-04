@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Console_Errors.JS_Errors">
+      <class name="Console_Errors.JE_errors_changes">
         <methods>
           <include name="test"/>
-          <include name="Setup"/>
           <include name="quit"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- Console_Errors.JS_Errors -->
+      </class> <!-- Console_Errors.JE_errors_changes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-02T21:21:09 IST" name="Default suite" finished-at="2022-07-02T21:21:39 IST" duration-ms="30315">
+  <suite started-at="2022-07-04T09:16:02 IST" name="Default suite" finished-at="2022-07-04T09:16:19 IST" duration-ms="17515">
     <groups>
     </groups>
-    <test started-at="2022-07-02T21:21:09 IST" name="Default test" finished-at="2022-07-02T21:21:39 IST" duration-ms="30315">
-      <class name="Console_Errors.JS_Errors">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Console_Errors.JS_Errors@5c30a9b0]" started-at="2022-07-02T21:21:09 IST" name="Setup" finished-at="2022-07-02T21:21:39 IST" duration-ms="29727" status="PASS">
+    <test started-at="2022-07-04T09:16:02 IST" name="Default test" finished-at="2022-07-04T09:16:19 IST" duration-ms="17515">
+      <class name="Console_Errors.JE_errors_changes">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:Console_Errors.JE_errors_changes@5c30a9b0]" started-at="2022-07-04T09:16:02 IST" name="Setup" finished-at="2022-07-04T09:16:18 IST" duration-ms="16351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="test()[pri:0, instance:Console_Errors.JS_Errors@5c30a9b0]" started-at="2022-07-02T21:21:39 IST" name="test" finished-at="2022-07-02T21:21:39 IST" duration-ms="150" status="FAIL">
+        <test-method signature="test()[pri:0, instance:Console_Errors.JE_errors_changes@5c30a9b0]" started-at="2022-07-04T09:16:18 IST" name="test" finished-at="2022-07-04T09:16:18 IST" duration-ms="373" status="FAIL">
           <exception class="org.openqa.selenium.UnsupportedCommandException">
             <message>
               <![CDATA[unknown command: Cannot call non W3C standard command while in W3C mode
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DNJ', ip: '192.168.27.160', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+System info: host: 'DNJ', ip: '192.168.9.160', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SHRADDHA\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 00c0be2f7aa7a9b7d8c9730948c72efc]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SHRADDHA\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58514}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 26f3e600df1db013741d09fbd1e2bd33]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.UnsupportedCommandException: unknown command: Cannot call non W3C standard command while in W3C mode
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'DNJ', ip: '192.168.27.160', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
+System info: host: 'DNJ', ip: '192.168.9.160', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SHRADDHA\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 00c0be2f7aa7a9b7d8c9730948c72efc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SHRADDHA\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58514}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 26f3e600df1db013741d09fbd1e2bd33
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -40,7 +40,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
 at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:33)
 at org.openqa.selenium.remote.RemoteLogs.getAvailableLogTypes(RemoteLogs.java:106)
-at Console_Errors.JS_Errors.test(JS_Errors.java:32)
+at Console_Errors.JE_errors_changes.test(JE_errors_changes.java:32)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -73,11 +73,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:Console_Errors.JS_Errors@5c30a9b0]" started-at="2022-07-02T21:21:39 IST" name="quit" finished-at="2022-07-02T21:21:39 IST" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="quit()[pri:0, instance:Console_Errors.JE_errors_changes@5c30a9b0]" started-at="2022-07-04T09:16:19 IST" name="quit" finished-at="2022-07-04T09:16:19 IST" duration-ms="640" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- Console_Errors.JS_Errors -->
+      </class> <!-- Console_Errors.JE_errors_changes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

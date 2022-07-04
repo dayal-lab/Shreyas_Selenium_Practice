@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class JS_Errors //RUN IN "MAVEN", IT RUNS PROPERLY.
+public class JS_only_Console_errors
 {
 	WebDriver driver;
 	@BeforeTest 
