@@ -1,5 +1,7 @@
 package Console_Errors;
 
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,7 +14,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class JS_only_Console_errors
+public class Console_Error_withDate
 {
 	WebDriver driver;
 	@BeforeTest 
@@ -30,15 +32,20 @@ public class JS_only_Console_errors
 	{
 	LogEntries  logEntries = driver.manage().logs().get(LogType.BROWSER);
 	for (LogEntry entry : logEntries)
-	System.out.println(entry);
+	System.out.println(new Date(entry.getTimestamp()) + " " + entry.getMessage() + " " + entry.toString()+'\n');
+ 
+	
 	}
 
 	@AfterTest
-	public void quit()
+	public void quit() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		driver.quit();
 	}
 }
+
+
 
 
 
