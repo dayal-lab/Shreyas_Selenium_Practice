@@ -29,8 +29,6 @@ public class Dimention
 	@Test
 	public void test()
 	{
-		
-
 		//"Dimention" is a class to call to check height and width of a particular button/image.
 		Dimension dimesion=driver.findElement(By.id("user_login")).getSize();	//getSize() emthod takes size of selectedbelement.
 		System.out.println("Width of Username field 	: "	+dimesion.width);		//takes width	
@@ -52,9 +50,7 @@ public class Dimention
 		System.out.println("Y position of whole window : "+point2.y+'\n');
 	
 	}
-		
-	
-	
+			
 	@AfterTest
 	public void quit() throws InterruptedException
 	{

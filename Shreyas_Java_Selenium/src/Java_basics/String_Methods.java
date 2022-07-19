@@ -15,7 +15,7 @@ public class String_Methods
 		
 		System.out.println("String in upper case : "+s.toUpperCase()); //all strings set in capital letters
 		
-		System.out.println("At index 2 string is : "+s.indent(2));
+		System.out.println("At index 2 string is : "+s.indent(2));	//taking data if index [2]
 		
 		System.out.println(s + "    " +d); //concatenated,  placed space in between two string Shreyas and Dayal
 	

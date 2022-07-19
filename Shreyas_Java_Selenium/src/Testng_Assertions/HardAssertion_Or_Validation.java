@@ -37,13 +37,13 @@ public class HardAssertion_Or_Validation
 		 Assert.assertEquals(actualimage ,  expectedimage);
 		 
 		 if(!expectedimage.equals(actualimage))
-		 {
-	 		System.out.println("Not matched search message with actual path");
-	 	 }
-		 	else
- 		{
-	 		System.out.println("Matched search message with actual path");
- 		}
+		 	{
+	 			System.out.println("Not matched search message with actual path");
+		 	}
+		 else
+		 	{
+	 			System.out.println("Matched search message with actual path");
+		 	}
  
  Thread.sleep(2000);
 		
