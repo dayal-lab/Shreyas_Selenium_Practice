@@ -1,5 +1,6 @@
-/TestNG/
 /Broken_Links_findout/
+/Calendar_select/
+/Checkboxes/
 /ChromeOptions/
 /Compassion/
 /Console_Errors/
@@ -22,6 +23,7 @@
 /SEF_Compassion/
 /Save_as_image/
 /Static_Method/
+/TestNG/
 /Testng_Assertions/
 /Wait_Load_Time/
 /WebDriverManager/
@@ -29,4 +31,3 @@
 /Webpage_Loadtime/
 /Zoom_In_Out/
 /screenshot_particular_element/
-/Calendar_select/
