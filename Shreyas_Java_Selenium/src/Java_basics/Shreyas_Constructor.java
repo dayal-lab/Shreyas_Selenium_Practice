@@ -6,7 +6,6 @@ public class Shreyas_Constructor
 	String s ; // "s" is a attribute which stores in variable "String"
 	String [] age;
 	
-	
 	//created Constructor with same name as class name "Shreyas_Constructor"
 	//"Constructor" use to set values for attributes.
 	public Shreyas_Constructor ()	
@@ -22,14 +21,22 @@ public class Shreyas_Constructor
 		age[0] = "34";
 		age[1] = "55";
 	}
+	
+	
+	
+
 
 	public static void main(String[] args) 
 	{
+		
+		//this is actually a "deafualt constructor", it is obj. but when we do not define any constructor
+		//then java complier automatically created this default contructor.
 		Shreyas_Constructor obj = new Shreyas_Constructor(); //object created and called constructor
 		
 		System.out.println(obj.c);
 		System.out.println(obj.s);
 		System.out.println(obj.age[1]);
+		
 	}
 
 }
