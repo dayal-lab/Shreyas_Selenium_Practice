@@ -1,4 +1,4 @@
-package GlobalHR_LOGIN;
+package GlobalHR;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,9 +12,8 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+public class Attednance_Delete_Multiple
 
-
-public class Nationality_Add_Form 
 {
 	WebDriver driver;
 	
@@ -25,10 +24,8 @@ public class Nationality_Add_Form
 		try
 		{
 		//after "WebDriverManager" when write  dot (.), then will show multiple web browsers.
-		// this will load automatically latest version, latest updated driver	
+		// this will load automatically latest version, latest updated driver
 		
-		System.setProperty("webdriver.chrome.driver", "path of chromdriver");
-			
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions(); 
 		options.addArguments("start-maximized"); //to open maximum size window		
@@ -63,53 +60,30 @@ public class Nationality_Add_Form
 		//create class of mouse hover
 		Actions action = new Actions (driver);
 		
-		//hovering on "Employee Hub" module
-		WebElement wc = driver.findElement(By.xpath("//body/div[3]/div[1]/nav[1]/ul[1]/li[5]/a[1]/img[1]"));
+		//hovering on "Attendance" module
+		WebElement wc = driver.findElement(By.xpath("//body/div[3]/div[1]/nav[1]/ul[1]/li[12]/a[1]/img[1]"));
 		action.moveToElement(wc).build().perform();
 		Thread.sleep(2000);
 		
-		//click on "Nationality" module
-		driver.findElement(By.xpath("//a[contains(text(),'Nationality')]")).click();
-		Thread.sleep(2000);
+		//click on "Employee Info" module
+		driver.findElement(By.xpath("//body/div[3]/div[1]/nav[1]/ul[1]/li[12]/div[1]/ul[1]/li[2]/a[1]")).click();
+		Thread.sleep(12000);
 		
-		//click on "Add" button
-		driver.findElement(By.xpath("//body/div[3]/div[1]/div[5]/div[2]/div[1]/div[2]/a[1]/i[1]")).click();
-		Thread.sleep(20000);
+		//click on red icon delete button's checkbox button
+		driver.findElement(By.xpath("//tbody/tr[@id='row_95']/td[1]")).click();
+		Thread.sleep(3000);
 		
-		//select "Requested By" dropdown button
-		driver.findElement(By.xpath("//div[@id='user_chosen']")).click();
-		Thread.sleep(4000);
-		
-		//select data "Poonam" from dropdown
-		driver.findElement(By.xpath("//li[contains(text(),'Poonam')]")).click();
-		Thread.sleep(4000);
-				
-		//select "Employee Full Name" dropdown button
-		driver.findElement(By.xpath("//div[@id='empId_chosen']")).click();
-		Thread.sleep(2000);
-		
-		//select data from dropdown
-		driver.findElement(By.xpath("//li[contains(text(),'Devdas Devendra Shula')]")).click();
-		Thread.sleep(4000); 
-		
-		//select "Contact Nationality" dropdown button
-		driver.findElement(By.xpath("//div[@id='CNTCT_NATIONALITY_ID_chosen']")).click();
-		Thread.sleep(2000);
-		
-		//select "Contact Nationality" dropdown button
-		driver.findElement(By.xpath("//li[contains(text(),'American Samoa')]")).click();
-		Thread.sleep(2000);
-		
-		//select "Save" dropdown button
-		driver.findElement(By.xpath("//button[@id='main']")).click();
-		Thread.sleep(20000);
-		
-		//search created data by netering data in seach field
-		driver.findElement(By.xpath("//body/div[3]/div[1]/div[5]/div[2]/form[1]/fieldset[1]/div[2]/div[1]/div[2]/div[1]/label[1]/input[1]")).sendKeys("devdas");
+		//click on red icon delete button;s checkbox button
+		driver.findElement(By.xpath("//tbody/tr[@id='row_94']/td[1]")).click();
+		Thread.sleep(3000);
+	
+		//click on bulk delete icon delete button button
+		driver.findElement(By.xpath("//body/div[3]/div[1]/div[5]/div[2]/div[1]/div[2]/button[1]/i[1]")).click();
 		Thread.sleep(2000);
 		
 		//click on "Logout" button
 		driver.findElement(By.xpath("//body/nav[1]/div[1]/ul[1]/li[7]/a[1]")).click();		
+		
 	}
 	
 	@AfterTest
@@ -119,3 +93,9 @@ public class Nationality_Add_Form
 		driver.quit();	
 	}	
 }
+
+
+
+
+
+

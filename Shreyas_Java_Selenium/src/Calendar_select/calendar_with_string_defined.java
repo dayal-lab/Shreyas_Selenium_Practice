@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class calendar
+public class calendar_with_string_defined
 {
 	WebDriver driver;
 	

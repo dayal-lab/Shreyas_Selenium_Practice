@@ -5,7 +5,7 @@ public class Data_Types
 	public static void main(String[] args) 
 	
 	{
-		char c 		= 'S';
+		char c 		= 'S';		//where "char" is data type, "c" is variable of datatype char, 'S' is a attribute/patameter.
 		String s 	= "Shreyas";
 		int i 		= 180;
 		float f 	= 1.22f;

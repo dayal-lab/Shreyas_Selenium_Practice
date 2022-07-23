@@ -1,4 +1,4 @@
-package GlobalHR_LOGIN;
+package GlobalHR;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +12,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Attednance_Delete_Multiple
-
+public class Recruitment_PDF_Download 
 {
 	WebDriver driver;
 	
@@ -60,30 +59,25 @@ public class Attednance_Delete_Multiple
 		//create class of mouse hover
 		Actions action = new Actions (driver);
 		
-		//hovering on "Attendance" module
-		WebElement wc = driver.findElement(By.xpath("//body/div[3]/div[1]/nav[1]/ul[1]/li[12]/a[1]/img[1]"));
+		//hovering on "Recruitment" module
+		WebElement wc = driver.findElement(By.xpath("//body/div[3]/div[1]/nav[1]/ul[1]/li[23]/a[1]/img[1]"));
 		action.moveToElement(wc).build().perform();
 		Thread.sleep(2000);
 		
-		//click on "Employee Info" module
-		driver.findElement(By.xpath("//body/div[3]/div[1]/nav[1]/ul[1]/li[12]/div[1]/ul[1]/li[2]/a[1]")).click();
+		//click on "Vacancy Master" module
+		driver.findElement(By.xpath("//a[contains(text(),'Vacancy Master')]")).click();
 		Thread.sleep(12000);
 		
-		//click on red icon delete button's checkbox button
-		driver.findElement(By.xpath("//tbody/tr[@id='row_95']/td[1]")).click();
-		Thread.sleep(3000);
-		
-		//click on red icon delete button;s checkbox button
-		driver.findElement(By.xpath("//tbody/tr[@id='row_94']/td[1]")).click();
-		Thread.sleep(3000);
-	
-		//click on bulk delete icon delete button button
-		driver.findElement(By.xpath("//body/div[3]/div[1]/div[5]/div[2]/div[1]/div[2]/button[1]/i[1]")).click();
+		//click on "EXPORT" button
+		driver.findElement(By.xpath("//body/div[3]/div[1]/div[5]/div[2]/div[1]/div[2]/div[1]/a[1]/span[1]/i[2]")).click();
 		Thread.sleep(2000);
 		
+		//click on "PDF" button
+		driver.findElement(By.xpath("//body/div[3]/div[1]/div[5]/div[2]/div[1]/div[2]/div[1]/div[1]/a[3]/i[1]")).click();
+		Thread.sleep(7000);
+				
 		//click on "Logout" button
 		driver.findElement(By.xpath("//body/nav[1]/div[1]/ul[1]/li[7]/a[1]")).click();		
-		
 	}
 	
 	@AfterTest
