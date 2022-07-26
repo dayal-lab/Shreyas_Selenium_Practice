@@ -27,7 +27,7 @@ abstract class Parent_Abstract
 	 //Now create object of class and call methods
 	 //public method define in same "Child" subclass method, it should not be outside of "Child" subclass.
 		  
-	  public static void main(String[] args)
+		  public static void main(String[] args)
 	  	{
 		  Child call = new Child();		//created object "call" of subclass "Child",
 		  								//we cannot create object of "Parent_Abstract", because we have taken properties from that class.

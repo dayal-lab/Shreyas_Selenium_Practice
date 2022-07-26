@@ -16,6 +16,9 @@ public class calendar_by_only_logic
 	WebDriver driver;
 	WebDriverWait wait;
 	
+	By byUsername 		= By.id("username");
+    By byPassword 		= By.id("password");
+    By byLoginButton 	= By.id("login");
 	By globalpool 		= By.xpath("//div[2]/div[2]/div[2]/input[@name='child-pool']");
 	By supporter_type	= By.xpath("//div[3]/div[2]/div[1]/div[@class='ui dropdown selection']");
 	
@@ -32,6 +35,12 @@ public class calendar_by_only_logic
 	@Test
 	public void test() throws InterruptedException
 	{
+		
+		driver.findElement(byUsername).sendKeys("GC_2");
+        driver.findElement(byPassword).sendKeys("G33con0404");
+        driver.findElement(byLoginButton).click();
+        Thread.sleep(1000);
+        
 		driver.findElement(globalpool).click();
 		Thread.sleep(1000);
 		
@@ -45,9 +54,6 @@ public class calendar_by_only_logic
 		Thread.sleep(2000);
 		
 	
-		
-		
-		
 		//click on "calendar" field to open it
 		driver.findElement(By.xpath("//input[@id='ffdate']")).click();
 		

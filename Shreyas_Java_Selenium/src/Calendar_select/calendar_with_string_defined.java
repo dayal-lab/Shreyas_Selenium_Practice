@@ -16,6 +16,9 @@ public class calendar_with_string_defined
 {
 	WebDriver driver;
 	
+	By byUsername 		= By.id("username");
+    By byPassword 		= By.id("password");
+    By byLoginButton 	= By.id("login");
 	By globalpool 		= By.xpath("//div[2]/div[2]/div[2]/input[@name='child-pool']");
 	By supporter_type	= By.xpath("//div[3]/div[2]/div[1]/div[@class='ui dropdown selection']");
 	
@@ -32,6 +35,12 @@ public class calendar_with_string_defined
 	@Test
 	public void test() throws InterruptedException
 	{
+		
+		driver.findElement(byUsername).sendKeys("GC_2");
+        driver.findElement(byPassword).sendKeys("G33con0404");
+        driver.findElement(byLoginButton).click();
+        Thread.sleep(1000);
+		
 		driver.findElement(globalpool).click();
 		Thread.sleep(1000);
 		

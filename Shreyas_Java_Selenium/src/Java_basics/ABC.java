@@ -20,7 +20,7 @@ package Java_basics;
 	}
 	
 	
-	class Child2 extends ABC //another child extends parent class by calling same abstract method
+	class Child2 extends Shreyas_Multiple_Abstract //another child extends parent class by calling same abstract method
 	{
 		@Override
 		public void Firstname1() 
